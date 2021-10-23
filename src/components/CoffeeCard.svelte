@@ -58,6 +58,5 @@
 				</button>
 			</div>
 		</div>
-		<p class="text-xs leading-5 text-gray-500">Free shipping on all continental US orders.</p>
 	</form>
 </div>
