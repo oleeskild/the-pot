@@ -5,6 +5,9 @@
   import NewItem from "../components/NewItem.svelte"
   import CoffeeEditor from "../components/CoffeeEditor.svelte"
   import {onMount} from "svelte";
+  import {flip} from "svelte/animate"
+  import { fade, fly, } from 'svelte/transition';
+
 
   let baseUrl = "https://oleeskild-coffee.builtwithdark.com";
 
@@ -37,8 +40,10 @@
 <Header title="{'THE POT'}"/>
 <Grid>
   <NewItem on:newCoffee={newCoffee} />  
-  {#each coffeeRatings as coffeeRating}
-  <CoffeeCard coffeeRating={coffeeRating}/>
+  {#each coffeeRatings as coffeeRating (coffeeRating.id)}
+  <div animate:flip={{duration:400}} transisition:fly >
+    <CoffeeCard coffeeRating={coffeeRating}/>
+  </div>
   {:else}
   LASTER!
   {/each}

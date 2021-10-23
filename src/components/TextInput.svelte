@@ -16,5 +16,6 @@
 		type="text"
 		placeholder="NAME"
 		on:input={change}
+		autocomplete="off"
 	/>
 </div>

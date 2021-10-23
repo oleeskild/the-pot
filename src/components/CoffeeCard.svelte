@@ -15,7 +15,7 @@
 		<div
 			class="flex flex-wrap items-baseline pl-52 -mt-6 -mr-6 -ml-52 py-6 pr-6 bg-black text-white"
 		>
-			<h1 class="w-full flex-none text-2xl leading-7 mb-2 font-bold">
+			<h1 class="w-full flex-none text-4xl leading-7 mb-2 font-bold">
 				{coffeeRating.name}
 			</h1>
 			<div class="text-2xl leading-7 font-bold">
@@ -27,7 +27,7 @@
 		</div>
 		<div class="flex items-baseline py-8">
 			<div
-				class="flex flex-col justify-start items-start text-sm leading-none font-bold text-gray-500"
+				class="flex flex-col justify-start items-start text-lg leading-none font-bold text-black font-mono"
 			>
 				<div class="flex w-full justify-start m-4">
 					<span class="pr-5">Aroma </span><ProgressBar score={coffeeRating.aroma} />

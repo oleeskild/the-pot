@@ -26,7 +26,7 @@
 </script>
 <div class="fixed top-0 right-0 bg-red-500 w-10/12 h-screen font-mono">
   <div class="flex flex-col m-6">
-    <h1 class="text-yellow-400 text-6xl">NEW COFFEE</h1>
+    <h1 class="text-yellow-400 text-6xl">NEW COFFEE RATING</h1>
     <div class="w-1/2 h-1 my-2 bg-yellow-400"></div>
     <form class="flex flex-col my-5 w-6/12">
         <TextInput id="username" label="NAME" on:change={setName}/>
