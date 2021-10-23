@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors')
+import colors from 'tailwindcss/colors';
 const config = {
 	mode: 'jit',
 	purge: ['./src/**/*.{html,js,svelte,ts}'],
