@@ -23,10 +23,17 @@
     dispatch("save", rating);
   }
 
+  function close(){
+    dispatch("close");
+  }
+
 </script>
-<div class="fixed top-0 right-0 bg-red-500 w-10/12 h-screen font-mono">
+<div class="fixed top-0 right-0 bg-red-500 w-6/12 h-screen font-mono">
   <div class="flex flex-col m-6">
-    <h1 class="text-yellow-400 text-6xl">NEW COFFEE RATING</h1>
+    <div class="flex justify-between">
+      <h1 class="text-yellow-400 text-6xl">NEW COFFEE RATING</h1>
+      <div class="cursor-pointer text-white text-6xl" on:click={close}>X</div>
+    </div>
     <div class="w-1/2 h-1 my-2 bg-yellow-400"></div>
     <form class="flex flex-col my-5 w-6/12">
         <TextInput id="username" label="NAME" on:change={setName}/>

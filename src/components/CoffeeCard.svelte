@@ -6,9 +6,10 @@
 <div class="flex p-6 font-mono shadow-lg">
 	<div class="flex-none w-40 relative">
 		<img
-			src="kaffi.jpg"
+			src="coffeecup.png"
 			alt=""
-			class="absolute inset-0 w-full h-full object-cover border border-black shadow-offset-yellow-400"
+			class="absolute inset-0 w-full h-full border border-black shadow-offset-yellow-400"
+			style="padding: 112px 32px 60px 32px"
 		/>
 	</div>
 	<form class="flex-auto pl-6">

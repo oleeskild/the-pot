@@ -9,7 +9,7 @@
   import { fade, fly, } from 'svelte/transition';
 
 
-  let baseUrl = "https://oleeskild-coffee.builtwithdark.com";
+  let baseUrl = "https://oleeskild-demo2.builtwithdark.com";
 
   let coffeeRatings = [];
 
@@ -21,11 +21,18 @@
     await getRatings();
   })
 
+  
+  function closeEditor(){
+    editCoffee = false;
+  }
+
   async function getRatings(){
 
-    coffeeRatings = await (await fetch(`${baseUrl}/coffeeratings`)).json();
+    coffeeRatings = [{name:"Høstkaffe", aroma:1, taste:3, type:"Arabica", brand:"Kaffebrenneriet"}]
+    // coffeeRatings = await (await fetch(`${baseUrl}/coffeeratings`)).json();
   }
-  
+
+
   async function saveCoffee(coffeeRating){
     editCoffee = false;
     console.log(coffeeRating.detail)
@@ -50,5 +57,5 @@
 
 </Grid>
 {#if editCoffee}
-  <CoffeeEditor on:save={saveCoffee}/>
+  <CoffeeEditor on:save={saveCoffee} on:close={closeEditor}/>
 {/if}
